@@ -1,0 +1,22 @@
+---
+title: "Assignment 3"
+author: "Hitanshu Prajapati"
+date: "08-16-2022"
+output: html_document
+---
+
+
+## Introduction
+
+This data set contains information about incarcerations in all the counties in America. The data has 153811 observations and 121 columns of different kinds of information such as the the jail populations of different races in each county. The columns related to this are what I will be focusing on analyzing in my report. Specifically, the variables I chose to analyze are aapi_jail_pop, black_jail_pop, latinx_jail_pop, native_jail_pop, white_jail_pop, and other_race_jail_pop. These variables contain information on the jail population, in each county, of many races including Asian American/Pacific Islander, Black, Latinx, Native American, White, and other races. By looking at these variables I will be focusing my analysis on the comparing incarceration rates of different racial groups to identify any patterns of racism.
+
+## Summary Information
+
+
+## Trends Over Time
+
+
+## Variable Comparison
+
+
+## Map
