@@ -1,23 +1,56 @@
 ---
 title: "Assignment 3"
 author: "Hitanshu Prajapati"
-date: "08-16-2022"
+date: "8-16-2022"
 output: html_document
 ---
 
+```{r setup, include=FALSE,echo=FALSE}
+source("analysis.R")
+library(knitr)
+```
+
+***
 
 ## Introduction
 
 This data set contains information about incarcerations in all the counties in America. The data has 153,811 observations and 121 columns of different kinds of information such as the the jail populations of different races in each county. The columns related to this are what I will be focusing on analyzing in my report. Specifically, the variables I chose to analyze are aapi_jail_pop, black_jail_pop, latinx_jail_pop, native_jail_pop, white_jail_pop, other_race_jail_pop, black_jail_pop_rate, white_jail_pop_rate. These variables contain information on the jail population, in each county, of many races including Asian American/Pacific Islander, Black, Latinx, Native American, White, and other races and also the rates of incarceration over the years of the Black and White populations. By looking at these variables I will be focusing my analysis on comparing incarceration rates and populations of different racial groups to identify patterns of racism.
 
+***
+
 ## Summary Information
 
 Using the information provided in the incarcerations data set I was able to analyze the differences between the jail populations of multiple races and the differences between the jail population rates of multiple races. One thing that was surprising to me as a result of my analysis was that the jail population comparisons and the jail population rates comparisons were contradicting each other. To compare the jail populations of different states in a specified year, I filtered the data set for that year and then took a sum of the jail population column for each race. When I ran this function for the year 2018, the result I got was that incarcerations were highest for the white population at 346,062. In comparison to the black population, which had 247,547 incarcerations, the white population had about 100,000 more incarcerations. The same pattern was seen when I calculated the total populations for the year 1985 when 86,947 black people were incarcerated and 89,248 white people were jailed. Again, white people were incarcerated the most. Looking at just this information it seems that racial injustice doesn't seem to be a problem in the prison system. However, a comparison of the rates of jail populations in America tells a different story. When comparing the average incarceration rate of the counties in the year 2018, the black population rate is 2519 and the white population rate is 498. In the year 1990, the black population rate is 4041 and the white population rate is 145. From these values it is clear that black people are being jailed at a significantly higher rate than white people. Although the difference between the jailing rates of the two races has decreased, it is still significantly high, suggesting that there is still racism in the prison system.
 
-## Trends Over Time
+***
 
+## Total Jail Population Trends of Different Races  
 
-## Variable Comparison
+```{r echo=FALSE, warning=FALSE, fig.align='center'}
 
+population_trends
 
-## Map
+```
+  
+This chart shows the jail population trends over the years of the different racial groups. According to this trends chart, it can be seen that the two racial categories that have the highest populations in jail are white and black. The next highest is the Latinx group and then Natives, Asian American/Pacific Islander, and other groups. I chose to display these trends because it shows how when looking at just the total jail populations, there is no clearly visible evidence of racism in the prison system.
+
+***
+
+## Incarceration Rates of Black vs White Racial Groups  
+
+```{r echo=FALSE, fig.align='center'}
+comparison_chart
+```
+  
+This bar graph shows the comparisons between the avg black incarceration rates and the average white incarceration rates between 1990 and 2018. I chose to display this visual because it clearly shows a huge difference between the incarceration rates of the two races. The rates for people of color are significantly higher than that of white people. This visual clearly shows that racism still exists in the prison system since the incarceration rate of colored people is higher.
+
+***
+
+## 2018 Incarceration Rate Difference Between Black and White Groups by County 
+
+```{r echo = FALSE, fig.align='center'}
+incarcerations_rates_map
+```
+
+This map shows the distribution of differences between the incarceration rates of African Americans and white people in each county in the United States from the year 2018. Displaying this information on a map allows us to clearly see which parts of America have racism in their prison system and how the different areas compare to each other. For example, according to this map, some counties have significantly more racism in their systems such as the county in Utah, a couple counties in Texas, and several in Missouri. This map also shows us the counties in which the incarceration rates of white people is more than people of color. All the counties which are colored gray are such counties. Knowing this information, we can clearly see how the number of states with higher incarcerations for African Americans significantly outnumbers those with high incarcerations for white people. So overall, from the analysis of this map, it can be concluded that racism still exists in the United States prison systems.
+
